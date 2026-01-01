@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Valorant Performance Analyzer</title>
+  </head>
+  <body>
+    <h1>Valorant Performance Analyzer</h1>
+
+    <h2>Add Round Data</h2>
+
+    <form id="round-form">
+      <label>
+        Killed enemy?
+        <input type="checkbox" id="kill" /> </label
+      ><br />
+
+      <label>
+        Assisted?
+        <input type="checkbox" id="assist" /> </label
+      ><br />
+
+      <label>
+        Survived round?
+        <input type="checkbox" id="survived" /> </label
+      ><br />
+
+      <label>
+        Traded?
+        <input type="checkbox" id="traded" /> </label
+      ><br />
+
+      <label>
+        Shots hit:
+        <input type="number" id="shotsHit" min="0" value="0" /> </label
+      ><br />
+
+      <label>
+        Headshots:
+        <input type="number" id="headshots" min="0" value="0" /> </label
+      ><br /><br />
+
+      <button type="submit">Add Round</button>
+    </form>
+    <p id="error" style="color: red"></p>
+
+    <hr />
+
+    <div id="stats"></div>
+
+    <h2>Round History</h2>
+    <table border="1" cellpadding="6" id="round-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Kill</th>
+          <th>Assist</th>
+          <th>Survived</th>
+          <th>Traded</th>
+          <th>Shots Hit</th>
+          <th>Headshots</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="primary-insight"></div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
